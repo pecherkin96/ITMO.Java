@@ -12,6 +12,11 @@ public class Part2 {
     }
 
     public static void ex_1() {
+
+//        Напишите программу, которая проверяет отсортирован ли массив по возрастанию.
+//        Если он отсортирован по возрастанию то выводится “OK”, если нет, то будет выводиться текст
+//        “Please, try again”
+
         int[] arrayListNumbers = {3, 5, 10, 13, 21, 99, 88};
         boolean sort = false;
         for (int x = 0; x < arrayListNumbers.length - 1; x++) {
@@ -29,6 +34,11 @@ public class Part2 {
     }
 
     public static void ex_2() throws IOException {
+
+//        Напишите программу, которая считывает с клавиатуры длину массива
+//        (например, пользователь вводит цифру 4), затем пользователь вводит 4 числа и на новой строке
+//        выводится массив из 4 элементов.
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("Введите размер массива:");
@@ -45,6 +55,9 @@ public class Part2 {
     }
 
     public static void ex_3() {
+
+//        Напишите метод, который меняет местами первый и последний элемент массива.
+
         int[] arrayListNumbers = {3, 5, 10, 13, 21, 99, 88};
         System.out.println(Arrays.toString(arrayListNumbers));
 
@@ -58,6 +71,9 @@ public class Part2 {
     }
 
     public static void ex_4() {
+
+//        Дан массив чисел. Найдите первое уникальное в этом массиве число.
+//                Например, для массива [1, 2, 3, 1, 2, 4] это число 3.
 
         boolean bool = false;
         int uniq_number=0;
@@ -79,15 +95,17 @@ public class Part2 {
         System.out.println("Уникальное число: " + ((bool) ? uniq_number : " не найдено"));
     }
     public static void ex_5(){
-        int[] Sortarray = new int[11];// Создаем массив
-        //Заполняем его случайными числами
+
+//      Заполните массив случайным числами и отсортируйте его. Используйте сортировку слиянием.
+
+        int[] sortarray = new int[11];
         Random r = new Random();
-        for (int i = 0; i < Sortarray.length; i++) {
-            Sortarray[i] = r.nextInt(100);
+        for (int i = 0; i < sortarray.length; i++) {
+            sortarray[i] = r.nextInt(100);
         }
         System.out.println("Исходный массив:");
-        System.out.println(Arrays.toString(Sortarray));
-        int[] newArr = cutArray(Sortarray);
+        System.out.println(Arrays.toString(sortarray));
+        int[] newArr = cutArray(sortarray);
         System.out.println("Отсортированный массив:");
         System.out.println(Arrays.toString(newArr));
     }

@@ -11,6 +11,10 @@ public class Part1 {
 
     }
     public static void ex_1(){
+
+//        Напишите программу, которая выводит на консоль нечетные числа от 1 до 99.
+//        Каждое число печатается с новой строки.
+
         for (int x = 0; x < 100; x++){
             if(x % 2 != 0){
                 System.out.println(x);
@@ -18,6 +22,10 @@ public class Part1 {
         }
     }
     public static void ex_2(){
+
+//        Напишите программу, которая выводит числа от 1 до 100,
+//        которые делятся на 3, 5 и на то и другое (то есть и на 3 и на 5).
+
         for (int x = 0; x < 100; x++){
             if(x % 3 == 0){
                 System.out.println("Делиться на 3:" + " " + x);
@@ -31,6 +39,10 @@ public class Part1 {
         }
     }
     public static void ex_3() throws IOException {
+
+//        Напишите программу, чтобы вычислить сумму двух целых чисел и вернуть true,
+//         если сумма равна третьему целому числу
+
         BufferedReader reader = new BufferedReader( new InputStreamReader(System.in));
 
         System.out.println("Введите первое число:");
@@ -49,6 +61,10 @@ public class Part1 {
 
     }
     public static void ex_4() throws IOException {
+
+//        Напишите программу, которая принимает от пользователя три целых числа и возвращает true,
+//         если второе число больше первого числа, а третье число больше второго числа.
+
         BufferedReader reader = new BufferedReader( new InputStreamReader(System.in));
 
         System.out.println("Введите первое число:");
@@ -66,6 +82,10 @@ public class Part1 {
         }
     }
     public static void ex_5(){
+
+//        Напишите программу, чтобы проверить, появляется ли число 3 как первый или последний элемент массива
+//        целых чисел. Длина массива должна быть больше или равна двум.
+
         int[] arrayListNumbers = {3,22,14,13};
         System.out.println("Array = " + Arrays.toString(arrayListNumbers));
         if (arrayListNumbers[0] == 3 || arrayListNumbers[arrayListNumbers.length - 1] == 3){
@@ -76,6 +96,9 @@ public class Part1 {
         }
     }
     public static void ex_6(){
+
+//        Напишите программу, чтобы проверить, что массив содержит число 1 или 3.
+
         int[] arrayListNumbers = {18,22,14,1};
         boolean content_1_or_3 = false;
         for(int x = 0; x < arrayListNumbers.length; x++){
