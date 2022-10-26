@@ -1,6 +1,6 @@
 package ITMO.Java.Lab6.ex1;
 
-public class Main implements ICreateAccount {
+public class Main implements createAccount {
     public static void main(String[] args) {
         Client client1 = new Client("Ivan", "Petrov", "Green");
         Clerk clerk1 = new Clerk("Irina","Vasilkova","Green");

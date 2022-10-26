@@ -11,25 +11,22 @@ class Car {
 //            ●	и пустой конструктор.
 
 
-    private String Name;
-   private String Color;
-   private Integer Weight;
-   private String Writeine;
+    private String color;
+   private Integer weight;
 
 
-   public Car(){
+    public Car(){
 
   }
     public Car(String color) {
-        this.Color = color;
+        this.color = color;
     }
     public Car(String color,Integer weight){
-        this.Color = color;
-        this.Weight = weight;
+        this.color = color;
+        this.weight = weight;
     }
     public String printCar() {
-       Writeine = "Цвет:"+ Color + " " + "Вес:" + Weight;
-       return this.Writeine;
+        return "Цвет:" + color + " " + "Вес:" + weight;
     }
 
     public static void main(String[] args) {

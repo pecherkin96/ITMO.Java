@@ -20,45 +20,44 @@ public class House {
 //      Выведите информацию про каждый объект.
 
 
-    private String Name;
-    private Integer Year_built;
-    private Integer Number_Floors;
-    private String Writeline;
-    private Integer Age;
+    private String name;
+    private Integer yearbuilt;
+    private Integer numberfloors;
+    private String writeline;
+    private Integer age;
 
-    public void Settingall(String name,Integer year_built, Integer number_floors){
+    public void settingall(String name,Integer yearbuilt, Integer numberfloors){
 
-        this.Name = name;
-        this.Year_built = year_built;
-        this.Number_Floors = number_floors;
+        this.name = name;
+        this.yearbuilt = yearbuilt;
+        this.numberfloors = numberfloors;
     }
-    public String Printhouse(){
+    public void  printhouse(){
 
-        Writeline ="Название: " + Name + " " + "Год постройки: " + Year_built + " "
-                + "Кол. Этажей: " + " " + Number_Floors + " " + "Возраст: " + Age();
-        return this.Writeline;
+        System.out.println("Название: " + name + " " + "Год постройки: " + yearbuilt + " "
+               + "Кол. Этажей: " + " " + numberfloors + " " + "Возраст: " + age());
+//
     }
-    public Integer  Age(){
-        this.Year_built = Year_built;
+    public Integer  age(){
         LocalDate date = LocalDate.now();
-        int year_current = date.getYear();
-        Age = year_current - Year_built;
-        return this.Age;
+        int yearcurrent = date.getYear();
+        age = yearcurrent - yearbuilt;
+        return this.age;
     }
-    public void ConstractHouse() {
+    public void constracthouse() {
         System.out.println("Название Дома?");
         Scanner scanner = new Scanner(System.in);
         if (scanner.hasNext()) {
-            Name = scanner.nextLine();
+            name = scanner.nextLine();
         }
 
         System.out.println("Количество этажей?");
         if (scanner.hasNext()) {
-            Number_Floors = scanner.nextInt();
+            numberfloors = scanner.nextInt();
         }
         System.out.println("Год постройки?");
         if (scanner.hasNext()){
-            Year_built = scanner.nextInt();
+            yearbuilt = scanner.nextInt();
         }
         }
 
@@ -66,11 +65,11 @@ public class House {
         House house1 = new House();
         House house2 = new House();
 
-        house1.ConstractHouse();
-        house2.Settingall("BigHouse", 1988,9);
+        house1.constracthouse();
+        house2.settingall("BigHouse", 1988,9);
 
-        System.out.println(house1.Printhouse());
-        System.out.println((house2.Printhouse()));
+        house1.printhouse();
+        house2.printhouse();
 
     }
 }

@@ -7,7 +7,10 @@ import java.util.Arrays;
 
 public class Part1 {
     public static void main(String[] args) throws IOException {
-        ex_6();
+
+        int[] arrayListNumbers = {3,22,14,13};
+
+        ex_1();
 
     }
     public static void ex_1(){
@@ -52,12 +55,7 @@ public class Part1 {
         System.out.println("Введите третье число:");
         int number_3 = Integer.parseInt(reader.readLine());
 
-        if (number_1 + number_2 == number_3){
-            System.out.println("Результат: true");
-        }
-        else{
-            System.out.println("Результат: false");
-        }
+            System.out.println(number_1 + number_2 == number_3);
 
     }
     public static void ex_4() throws IOException {
@@ -74,19 +72,15 @@ public class Part1 {
         System.out.println("Введите третье число:");
         int number_3 = Integer.parseInt(reader.readLine());
 
-        if (number_1 < number_2 && number_2 < number_3){
-            System.out.println("Результат: true");
-        }
-        else{
-            System.out.println("Результат: false");
-        }
+        System.out.println(number_1 < number_2 && number_2 < number_3);
+
     }
-    public static void ex_5(){
+    public static void ex_5(int[] arrayListNumbers){
 
 //        Напишите программу, чтобы проверить, появляется ли число 3 как первый или последний элемент массива
 //        целых чисел. Длина массива должна быть больше или равна двум.
 
-        int[] arrayListNumbers = {3,22,14,13};
+
         System.out.println("Array = " + Arrays.toString(arrayListNumbers));
         if (arrayListNumbers[0] == 3 || arrayListNumbers[arrayListNumbers.length - 1] == 3){
             System.out.println("true");
@@ -95,11 +89,10 @@ public class Part1 {
             System.out.println("false");
         }
     }
-    public static void ex_6(){
+    public static void ex_6(int[] arrayListNumbers){
 
 //        Напишите программу, чтобы проверить, что массив содержит число 1 или 3.
 
-        int[] arrayListNumbers = {18,22,14,1};
         boolean content_1_or_3 = false;
         for(int x = 0; x < arrayListNumbers.length; x++){
             if(arrayListNumbers[x] == 3 || arrayListNumbers[x] ==1 ){

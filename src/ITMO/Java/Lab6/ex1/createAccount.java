@@ -1,6 +1,6 @@
 package ITMO.Java.Lab6.ex1;
 
-public interface ICreateAccount {
+public interface createAccount {
     String CreateAccount();
 
 }

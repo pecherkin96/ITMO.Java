@@ -2,18 +2,17 @@ package ITMO.Java.Lab6.ex1;
 
 public class Clerk extends Person{
 
-    private String Name_bank;
+    private String nameBank;
 
-    public void setName_bank(String name_bank) {
-        this.Name_bank = name_bank;
+    public void setNameBank(String nameBank) {
+        this.nameBank = nameBank;
     }
-    public Clerk(String firstname,String lastname, String name_bank){
+    public Clerk(String firstname,String lastname, String nameBank){
         super(firstname, lastname);
-        this.Name_bank = name_bank;
+        this.nameBank = nameBank;
     }
 
     @Override
-    public String getAll() {
-        return "Сотрудник банка" + Name_bank + ":" + getLastname() + getFirstname();
+    public void getAll() {
     }
 }

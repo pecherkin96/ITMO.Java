@@ -11,20 +11,20 @@ public class Tree {
 
 //    Создайте три объекта на основе класса и используйте по одному конструктору на каждый.
 
-    private String Name;
-    private Integer Age;
+    private String name;
+    private Integer age;
     private Boolean isAlive;
 
     public Tree(){
         System.out.println("Пустой конструктор без параметров сработал");
     }
-    public Tree(String Name, Integer Age){
-        this.Name = Name;
-        this.Age = Age;
+    public Tree(String name, Integer age){
+        this.name = name;
+        this.age = age;
     }
-    public Tree(String Name, Integer Age,Boolean isAlive){
-        this.Name = Name;
-        this.Age = Age;
+    public Tree(String name, Integer age,Boolean isAlive){
+        this.name = name;
+        this.age = age;
         this.isAlive = isAlive;
 
     }

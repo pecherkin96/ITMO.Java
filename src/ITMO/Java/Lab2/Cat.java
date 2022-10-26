@@ -1,6 +1,6 @@
 package ITMO.Java.Lab2;
 
-public class Cats {
+public class Cat {
 
 //    Создать класс, который обозначает какую-либо сущность.
 //    Определить у него несколько конструкторов - конструктор по умолчанию и конструктор со всеми параметрами.
@@ -12,11 +12,11 @@ public class Cats {
     String color;
     Integer age;
 
-    public Cats(){
+    public Cat(){
 
     }
 
-    public Cats(String breed, String color, Integer age){
+    public Cat(String breed, String color, Integer age){
         this.breed = breed;
         this.color = color;
         this.age = age;

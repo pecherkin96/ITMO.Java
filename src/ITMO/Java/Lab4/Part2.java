@@ -7,20 +7,28 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Part2 {
+
+    private Integer[] ex_2;
+
     public static void main(String[] args) throws IOException {
-        ex_5();
+
+        Part2 array = new Part2();
+        array.ex_2();
+
+        array.ex_4();
+
     }
 
-    public static void ex_1() {
+    public  void ex_1() {
 
 //        Напишите программу, которая проверяет отсортирован ли массив по возрастанию.
 //        Если он отсортирован по возрастанию то выводится “OK”, если нет, то будет выводиться текст
 //        “Please, try again”
 
-        int[] arrayListNumbers = {3, 5, 10, 13, 21, 99, 88};
+        this.ex_2 = ex_2;
         boolean sort = false;
-        for (int x = 0; x < arrayListNumbers.length - 1; x++) {
-            if (arrayListNumbers[x] < arrayListNumbers[x + 1]) {
+        for (int x = 0; x < ex_2.length - 1; x++) {
+            if (ex_2[x] < ex_2[x + 1]) {
                 sort = true;
             } else {
                 sort = false;
@@ -33,7 +41,7 @@ public class Part2 {
         }
     }
 
-    public static void ex_2() throws IOException {
+    public Integer [] ex_2() throws IOException {
 
 //        Напишите программу, которая считывает с клавиатуры длину массива
 //        (например, пользователь вводит цифру 4), затем пользователь вводит 4 числа и на новой строке
@@ -41,71 +49,71 @@ public class Part2 {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Введите размер массива:");
-        int size_array = Integer.parseInt(reader.readLine());
-        int[] own_array = new int[size_array];
 
-        for (int x = 0; x < size_array; x++) {
+        System.out.println("Введите размер массива:");
+        int sizeArray = Integer.parseInt(reader.readLine());
+        this.ex_2 = new Integer[sizeArray];
+
+        for (int x = 0; x < sizeArray; x++) {
             System.out.println("Введите  число:");
             int numbers = Integer.parseInt(reader.readLine());
-            own_array[x] = numbers;
+            ex_2[x] = numbers;
         }
-
-        System.out.println(Arrays.toString(own_array));
+        System.out.println(Arrays.toString(ex_2));
+        return this.ex_2;
     }
 
-    public static void ex_3() {
+    public  void ex_3() {
 
 //        Напишите метод, который меняет местами первый и последний элемент массива.
 
-        int[] arrayListNumbers = {3, 5, 10, 13, 21, 99, 88};
-        System.out.println(Arrays.toString(arrayListNumbers));
+        System.out.println(Arrays.toString(ex_2));
 
-        int firstNumberArray = arrayListNumbers[0];
-        int lastNumberArray = arrayListNumbers[arrayListNumbers.length - 1];
+        int firstNumberArray = ex_2[0];
+        int lastNumberArray = ex_2[ex_2.length - 1];
 
-        arrayListNumbers[0] = lastNumberArray;
-        arrayListNumbers[arrayListNumbers.length - 1] = firstNumberArray;
+        ex_2[0] = lastNumberArray;
+        ex_2[ex_2.length - 1] = firstNumberArray;
 
-        System.out.println(Arrays.toString(arrayListNumbers));
+        System.out.println(Arrays.toString(ex_2));
     }
 
-    public static void ex_4() {
+    public void ex_4() {
 
 //        Дан массив чисел. Найдите первое уникальное в этом массиве число.
 //                Например, для массива [1, 2, 3, 1, 2, 4] это число 3.
 
         boolean bool = false;
-        int uniq_number=0;
-        int[] array = {1, 2, 1, 2, 5, 6, 6, 8, 9, 9, 7, 3};
+        int uniqNumber=0;
 
-        for (int x = 0; x < array.length; x++) {
-            for (int y = 0; y < array.length; y++) {
-                if(array[x] == array[y] && x != y){
+        for (int x = 0; x < ex_2.length; x++) {
+            for (int y = 0; y < ex_2.length; y++) {
+                if(ex_2[x] == ex_2[y] && x != y){
                     bool = false; break;
                 }
-                if(array[x] != array[y] ){
+                if(ex_2[x] != ex_2[y] ){
                     bool = true;
                 }
             }
             if(bool) {
-                uniq_number = array[x]; break;
+                uniqNumber = ex_2[x]; break;
             }
         }
-        System.out.println("Уникальное число: " + ((bool) ? uniq_number : " не найдено"));
+        System.out.println("Уникальное число: " + ((bool) ? uniqNumber : " не найдено"));
     }
-    public static void ex_5(){
+    public  void ex_5(){
 
 //      Заполните массив случайным числами и отсортируйте его. Используйте сортировку слиянием.
 
-        int[] sortarray = new int[11];
+        int arrayListNumbers [] = Arrays.stream(ex_2).mapToInt(i->i).toArray();
+
         Random r = new Random();
-        for (int i = 0; i < sortarray.length; i++) {
-            sortarray[i] = r.nextInt(100);
+        for (int i = 0; i < arrayListNumbers.length; i++) {
+            arrayListNumbers[i] = r.nextInt(100);
         }
         System.out.println("Исходный массив:");
-        System.out.println(Arrays.toString(sortarray));
-        int[] newArr = cutArray(sortarray);
+        System.out.println(Arrays.toString(arrayListNumbers));
+        int[] newArr = cutArray(arrayListNumbers);
         System.out.println("Отсортированный массив:");
         System.out.println(Arrays.toString(newArr));
     }

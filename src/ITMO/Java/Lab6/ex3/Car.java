@@ -1,10 +1,10 @@
 package ITMO.Java.Lab6.ex3;
 
 public class Car {
-    public int weight;
-    public String model;
-    public char color;
-    public float speed;
+    private int weight;
+    private String model;
+    private char color;
+    private float speed;
 
 
     public void outPut () {

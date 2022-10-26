@@ -38,7 +38,7 @@ public class Lab1
 //        выражение: (number / 10) / 10. Результат выведите на консоль.
 
         int number = 10500;
-        double result = (number / 10) / 10;
+        double result = ((double) number / 10D) / 10D;
         System.out.println(result);
     }
     public static void ex_4() {

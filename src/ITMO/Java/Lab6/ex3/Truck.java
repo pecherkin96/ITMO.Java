@@ -1,17 +1,17 @@
 package ITMO.Java.Lab6.ex3;
 
 public class Truck extends Car{
-    Integer Max_weight;
-    Integer Wheels_number;
+    Integer maxWeight;
+    Integer wheelsNumber;
 
-    public Truck(int w, String m, char c, float s, Integer max_weight, Integer wheels_number) {
+    public Truck(int w, String m, char c, float s, Integer maxWeight, Integer wheelsNumber) {
         super(w, m, c, s);
-        this.Max_weight = max_weight;
-        this.Wheels_number = wheels_number;
+        this.maxWeight = maxWeight;
+        this.wheelsNumber = wheelsNumber;
     }
 
-    public void newWheels( int wheels_number){
-        this.Wheels_number = wheels_number;
-        System.out.println("Текущее количество колёс:" + Wheels_number);
+    public void newWheels( int wheelsNumber){
+        this.wheelsNumber = wheelsNumber;
+        System.out.println("Текущее количество колёс:" + wheelsNumber);
     }
 }

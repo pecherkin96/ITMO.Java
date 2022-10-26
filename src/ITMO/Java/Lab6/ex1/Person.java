@@ -2,21 +2,21 @@ package ITMO.Java.Lab6.ex1;
 
 public abstract class Person {
 
-    private String Firstname;
-    private String Lastname;
+    private final String firstname;
+    private final String lastname;
 
     public String getFirstname() {
-        return Firstname;
+        return firstname;
     }
 
     public String getLastname() {
-        return Lastname;
+        return lastname;
     }
 
-    public Person(String firstname, String lastname){
-        this.Firstname = firstname;
-        this.Lastname = lastname;
+     Person(String firstname, String lastname){
+        this.firstname = firstname;
+        this.lastname = lastname;
     }
-    public abstract String getAll();
+    public abstract void getAll();
 
 }
